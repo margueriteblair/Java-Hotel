@@ -15,12 +15,31 @@ public class Room {
         //constructor's parameters
     }
 
-    public boolean reserve() {
+    public boolean reserve(Client client) {
+        if (isOccupied == true || needsCleaning == true) {
+            System.out.println("This room is not available!");
+            return false;
+        }
         isOccupied = true;
+        occupant = client;
+//        client.roomNum = this; //we're setting it equal to this instantiation
+
+
         return true;
     }
 
     public void clean() {
         needsCleaning = false;
     }
+
+    public void checkout() {
+        isOccupied = false;
+        needsCleaning = true;
+        System.out.println("Outstanding price: $" + occupant.getBalance());
+    //note to self, margie, create get outstandingbalance() method for the client
+
+    }
+
+    //create our getters and setters below:
+
 }

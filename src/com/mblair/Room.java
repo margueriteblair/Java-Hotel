@@ -9,7 +9,7 @@ public abstract class Room {
     private Client occupant;
     private int averagePrice;
 
-    public Room(int averagePrice, int roomNum, String roomType) {
+    public Room(int averagePrice, int roomNum, String roomType, int roomFloor) {
         //this will be the constructor function for the class
         //when we instantiate this in other classes, we'll have to pass in the
         //constructor's parameters

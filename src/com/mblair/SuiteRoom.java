@@ -7,6 +7,7 @@ public class SuiteRoom extends Room {
 
     public SuiteRoom() {
         //constructor baby!
+        super();
     }
 
     public void overrideReserve() {

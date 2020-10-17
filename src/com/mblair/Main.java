@@ -7,9 +7,9 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         Hotel javaHotel = new Hotel("Java Hotel",
-                new StandardRoom(),
-                new StandardRoom(),
-                new StandardRoom(),
+                new StandardRoom(1000, 101, "single", 1),
+                new StandardRoom(2000, 404, "single", 4),
+                new StandardRoom(1500, 302, "single", 3),
                 new SuiteRoom(),
                 new SuiteRoom()
                 );

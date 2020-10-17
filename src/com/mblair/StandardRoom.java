@@ -5,4 +5,8 @@ public class StandardRoom extends Room {
     public boolean reserve(Client client) {
         return super.reserve(client);
     }
+
+    public StandardRoom() {
+        //constructor baby!
+    }
 }

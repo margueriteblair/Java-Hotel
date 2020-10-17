@@ -5,6 +5,10 @@ public class SuiteRoom extends Room {
     private boolean needsRestock;
     //
 
+    public SuiteRoom() {
+        //constructor baby!
+    }
+
     public void overrideReserve() {
         //include a check on needsRestock then run standard reserve
     }

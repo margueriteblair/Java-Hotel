@@ -28,7 +28,7 @@ public class Hotel {
     }
 
     public void addRoom(Room room) {
-        //add room to either suiteroom
+        //add room to either suite room
         //or add room to standard room list hehe
     }
 

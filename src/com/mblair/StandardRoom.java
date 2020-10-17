@@ -10,8 +10,8 @@ public class StandardRoom extends Room {
         return super.reserve(client);
     }
 
-    public StandardRoom() {
-        super(averagePrice, roomNum, roomType, getRoomFloor); //use getters to get these bad mamma jammas
+    public StandardRoom(int averagePrice, int roomNum, String roomType, int roomFloor) {
+        super(averagePrice, roomNum, roomType, roomFloor); //use getters to get these bad mamma jammas
         rooms = 1;
         beds = 1;
     }

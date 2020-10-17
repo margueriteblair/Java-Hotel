@@ -40,7 +40,15 @@ public class Main {
             System.out.println("Reservation in room " + selectedRoom + " booked, enjoy your stay!");
         } else if (token.trim().equals("out")) {
             //checking out logic
-            System.out.println("You're checking out.");
+            System.out.println("Please select which of the following rooms you're checking out of:");
+            for (var room : hotel.reservedStandards) {
+                System.out.println(room.getRoomNum());
+            }
+            int selectedRoom = scanner.nextInt();
+            //add logic to ensure type of room is in there
+            System.out.println("Great! For confirmation, please type you're full name as you used it to book the room: ");
+            String checkoutClient = scanner.nextLine();
+            System.out.println("Thank you, " + checkoutClient + "! We'll see you next time.");
         } else {
             System.out.println("Please input a valid option.");
         }

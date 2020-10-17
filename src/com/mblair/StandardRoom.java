@@ -7,6 +7,9 @@ public class StandardRoom extends Room {
     }
 
     public StandardRoom() {
+        super(averagePrice, roomNum, "single", roomFloor);
+        rooms = 1;
+        beds = 1;
         //constructor baby!
     }
 }

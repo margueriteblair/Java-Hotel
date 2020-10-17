@@ -3,6 +3,7 @@ package com.mblair;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Hotel {
     private String hotelName;
@@ -24,6 +25,29 @@ public class Hotel {
         for (var room: rooms) {
             addRoom(room);
         }
+    }
+
+    public void addRoom(Room room) {
+        //add room to either suiteroom
+        //or add room to standard room list hehe
+    }
+
+    public void reserveRoom() {
+        //pull a room from the correct list
+        //if empty, print "unavailable"
+        //otherwise, run the checkout for the room and move the room from
+        //available to reserved
+        //add client to clients list
+    }
+
+    public void checkoutRoom(Room room) {
+        //run the checkout process for a room and move the room
+        //from reserved to available
+    }
+
+    public void getClientBalance() {
+        //get the balance of a client either by their room number
+        //or by their name
     }
 
 

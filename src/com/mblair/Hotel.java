@@ -30,6 +30,12 @@ public class Hotel {
     public void addRoom(Room room) {
         //add room to either suite room
         //or add room to standard room list hehe
+        if (room.getRoomType().equals("suite")) {
+            availableSuites.add((SuiteRoom) room);
+        } else {
+            availableStandards.add((StandardRoom) room);
+        }
+        allRooms.put(room.getRoomNum(), room.getRoomType());
     }
 
     public void reserveRoom() {

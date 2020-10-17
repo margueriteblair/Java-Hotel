@@ -35,7 +35,7 @@ public class Hotel {
         } else {
             availableStandards.add((StandardRoom) room);
         }
-        allRooms.put(room.getRoomNum(), room.getRoomType());
+        allRooms.put(room.getRoomNum(), room);
     }
 
     public void reserveRoom() {

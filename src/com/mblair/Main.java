@@ -1,7 +1,7 @@
 package com.mblair;
 
 import java.util.Scanner;
-
+import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
@@ -27,7 +27,12 @@ public class Main {
         if (token.trim().equals("in")) {
             //checking in logic
             System.out.println("Please select one of the available rooms from below:");
-            System.out.println(hotel.allRooms);
+            for (var room : hotel.availableStandards) {
+                System.out.print(room.getRoomNum() + "-" + room.getRoomType() + " ");
+            }
+            for (var room : hotel.availableSuites) {
+                System.out.print(room.getRoomNum() + "-" + room.getRoomType());
+            }
         } else if (token.trim().equals("out")) {
             //checking out logic
             System.out.println("You're checking out.");

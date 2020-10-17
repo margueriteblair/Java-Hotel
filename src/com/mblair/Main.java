@@ -33,6 +33,11 @@ public class Main {
             for (var room : hotel.availableSuites) {
                 System.out.print(room.getRoomNum() + "-" + room.getRoomType());
             }
+            System.out.println();
+
+            //we need logic to ensure that the room they put in for actually exists
+            int selectedRoom = scanner.nextInt();
+            System.out.println("Reservation in room " + selectedRoom + " booked, enjoy your stay!");
         } else if (token.trim().equals("out")) {
             //checking out logic
             System.out.println("You're checking out.");

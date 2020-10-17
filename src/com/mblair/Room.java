@@ -1,6 +1,6 @@
 package com.mblair;
 
-public class Room {
+public abstract class Room {
     private int roomNum;
     private String roomType;
     private int roomFloor;
@@ -13,6 +13,10 @@ public class Room {
         //this will be the constructor function for the class
         //when we instantiate this in other classes, we'll have to pass in the
         //constructor's parameters
+        this.averagePrice = averagePrice;
+        this.roomNum = roomNum;
+        this.roomFloor = roomFloor;
+        this.roomType = roomType;
     }
 
     public boolean reserve(Client client) {

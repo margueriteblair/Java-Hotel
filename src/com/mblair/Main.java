@@ -26,12 +26,14 @@ public class Main {
         String token = scanner.next();
         if (token.trim().equals("in")) {
             //checking in logic
+            System.out.println("You're checking in");
         } else if (token.trim().equals("out")) {
             //checking out logic
+            System.out.println("You're checking out.");
         } else {
             System.out.println("Please input a valid option.");
         }
-
+//note to self, maybe a hashmap with a unique key and value for each room to make it easier//for guests
 
         scanner.close();
     }

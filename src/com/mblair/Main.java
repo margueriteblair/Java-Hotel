@@ -9,9 +9,9 @@ public class Main {
         Hotel javaHotel = new Hotel("Java Hotel",
                 new StandardRoom(1000, 101, "single", 1),
                 new StandardRoom(2000, 404, "single", 4),
-                new StandardRoom(1500, 302, "single", 3),
-                new SuiteRoom(),
-                new SuiteRoom()
+                new StandardRoom(1500, 302, "single", 3)
+//                new SuiteRoom(),
+//                new SuiteRoom()
                 );
         //create command line interface code to go below
         //that way, when we run the main program, just like with the mortgage

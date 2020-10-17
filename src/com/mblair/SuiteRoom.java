@@ -5,9 +5,9 @@ public class SuiteRoom extends Room {
     private boolean needsRestock;
     //
 
-    public SuiteRoom() {
+    public SuiteRoom(int averagePrice, int roomNum, String roomType, int roomFloor) {
         //constructor baby!
-        super();
+        super(averagePrice, roomNum, "suite", roomFloor);
     }
 
     public void overrideReserve() {

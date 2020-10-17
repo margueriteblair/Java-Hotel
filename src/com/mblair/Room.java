@@ -9,7 +9,7 @@ public abstract class Room {
     private Client occupant;
     private int averagePrice;
 
-    public Room() {
+    public Room(int averagePrice, int roomNum, String roomType) {
         //this will be the constructor function for the class
         //when we instantiate this in other classes, we'll have to pass in the
         //constructor's parameters
@@ -28,7 +28,6 @@ public abstract class Room {
         occupant = client;
 //        client.roomNum = this; //we're setting it equal to this instantiation
 
-
         return true;
     }
 
@@ -45,5 +44,31 @@ public abstract class Room {
     }
 
     //create our getters and setters below:
+    public int getRoomNum() {
+        return roomNum;
+    }
 
+    public int getAveragePrice() {
+        return averagePrice;
+    }
+
+    public int getRoomFloor() {
+        return roomFloor;
+    }
+
+    public String getRoomType() {
+        return roomType;
+    }
+
+    public boolean isOccupied() {
+        return isOccupied;
+    }
+
+    public boolean isNeedsCleaning() {
+        return needsCleaning;
+    }
+
+    public Client getOccupant() {
+        return occupant;
+    }
 }

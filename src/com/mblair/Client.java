@@ -16,6 +16,8 @@ public class Client {
         this.partySize = partySize;
     }
 
+
+    //setter and getter functions
     public String getName() {
         return name;
     }

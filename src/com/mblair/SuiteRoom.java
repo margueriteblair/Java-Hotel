@@ -13,7 +13,7 @@ public class SuiteRoom extends Room {
         //set needsRestock to true run standard checkout
     }
 
-    public void setRestock() {
+    public void restock() {
         needsRestock = false;
     }
 

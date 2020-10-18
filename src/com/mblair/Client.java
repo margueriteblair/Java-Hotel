@@ -29,7 +29,6 @@ public class Client {
     public int getOutstanding() {
         //returns the outstanding balance
         return currentBill - prepaidAmt;
-
     }
 
 

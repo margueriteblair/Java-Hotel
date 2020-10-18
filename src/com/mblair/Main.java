@@ -33,8 +33,8 @@ public class Main {
 //            for (var room : hotel.availableSuites) {
 //                System.out.print(room.getRoomNum() + "-" + room.getRoomType());
 //            }
-            for (var room : hotel.allRooms.keySet()) {
-                System.out.print(room + " ");
+            for (var room : hotel.allRooms.entrySet()) {
+                System.out.print("Room " + room.getKey() + " - $" + room.getValue().getAveragePrice() + " - " + room.getValue().getRoomType() + "      ");
             }
             System.out.println();
 
@@ -44,7 +44,6 @@ public class Main {
             if (hotel.allRooms.containsKey(selectedRoom)) {
                 System.out.println("Type your full name to book the room:");
                 String resName = scanner.nextLine();
-                System.out.println(resName);
                 System.out.println("Reservation in room " + selectedRoom + " booked, " + resName + ", enjoy your stay!");
 
 

@@ -40,10 +40,12 @@ public class Main {
 
             //we need logic to ensure that the room they put in for actually exists
             int selectedRoom = scanner.nextInt();
+            scanner.nextLine();
             if (hotel.allRooms.containsKey(selectedRoom)) {
                 System.out.println("Type your full name to book the room:");
                 String resName = scanner.nextLine();
-                System.out.println("Reservation in room " + selectedRoom + " booked, " + resName + "enjoy your stay!");
+                System.out.println(resName);
+                System.out.println("Reservation in room " + selectedRoom + " booked, " + resName + ", enjoy your stay!");
 
 
             } else if (!hotel.allRooms.containsKey(selectedRoom)) {

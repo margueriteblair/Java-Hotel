@@ -52,10 +52,10 @@ public class Main {
                 System.out.println("Lastly, how many guests are in your booking party?");
                 int partySize = scanner.nextInt();
                 Client client = new Client(resName, phoneNumber, partySize);
-                System.out.println(client);
+                hotel.reserveRoom(hotel.allRooms.get(selectedRoom), client);
                 System.out.println("Reservation in room " + selectedRoom + " booked, " + resName + ", enjoy your stay!");
                 //could also use client.getName() and such and such methods
-
+                //add a back to main menu type of thing here?
 
             } else if (!hotel.allRooms.containsKey(selectedRoom)) {
                 System.out.println("Error in trying to book your room, please try again.");

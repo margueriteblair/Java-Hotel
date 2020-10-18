@@ -46,6 +46,8 @@ public class Hotel {
         //add client to clients list
         if (room.getRoomType().equals("single")) {
             reservedStandards.add((StandardRoom) room);
+            availableStandards.remove((StandardRoom) room);
+
         } else if (room.getRoomType().equals("suite")) {
             reservedSuites.add((SuiteRoom) room);
         }

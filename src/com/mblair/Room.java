@@ -68,6 +68,10 @@ public abstract class Room {
         return needsCleaning;
     }
 
+    public void setIsOccupied(boolean isOccupied) {
+        isOccupied = !isOccupied;
+    }
+
     public Client getOccupant() {
         return occupant;
     }

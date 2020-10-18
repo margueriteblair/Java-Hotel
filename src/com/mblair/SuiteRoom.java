@@ -7,7 +7,8 @@ public class SuiteRoom extends Room {
 
     public SuiteRoom(int averagePrice, int roomNum, String roomType, int roomFloor) {
         //constructor baby!
-        super(averagePrice, roomNum, "suite", roomFloor); //the defaults
+        super(averagePrice, roomNum, roomType, roomFloor); //the defaults
+        //room type will always be 'single'
     }
 
     public void overrideReserve() {

@@ -44,6 +44,11 @@ public class Main {
             if (hotel.allRooms.containsKey(selectedRoom)) {
                 System.out.println("Type your full name to book the room:");
                 String resName = scanner.nextLine();
+                System.out.println("Please enter an amount to pay now for the room. Doesn't have to be total, but must be an integer. Total cost for the room is " + hotel.allRooms.get(selectedRoom).getAveragePrice());
+                int prepaidAmt = scanner.nextInt();
+                System.out.println("Lastly, how many guests are in your booking party?");
+                scanner.nextLine();
+                int partySize = scanner.nextInt();
                 System.out.println("Reservation in room " + selectedRoom + " booked, " + resName + ", enjoy your stay!");
 
 

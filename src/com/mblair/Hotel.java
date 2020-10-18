@@ -38,12 +38,17 @@ public class Hotel {
         allRooms.put(room.getRoomNum(), room);
     }
 
-    public void reserveRoom() {
+    public void reserveRoom(Room room, Client client) {
         //pull a room from the correct list
         //if empty, print "unavailable"
         //otherwise, run the checkout for the room and move the room from
         //available to reserved
         //add client to clients list
+        if (room.getRoomType().equals("single")) {
+            reservedStandards.add((StandardRoom) room);
+        } else if (room.getRoomType().equals("suite")) {
+            reservedSuites.add((SuiteRoom) room);
+        }
     }
 
     public void checkoutRoom(Room room) {

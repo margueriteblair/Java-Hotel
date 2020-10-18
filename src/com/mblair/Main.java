@@ -50,9 +50,9 @@ public class Main {
                 scanner.nextLine();
                 String phoneNumber = scanner.nextLine();
                 System.out.println("Lastly, how many guests are in your booking party?");
-                scanner.nextLine();
                 int partySize = scanner.nextInt();
                 Client client = new Client(resName, phoneNumber, partySize);
+                System.out.println(client);
                 System.out.println("Reservation in room " + selectedRoom + " booked, " + resName + ", enjoy your stay!");
                 //could also use client.getName() and such and such methods
 

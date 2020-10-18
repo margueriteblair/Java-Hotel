@@ -46,10 +46,15 @@ public class Main {
                 String resName = scanner.nextLine();
                 System.out.println("Please enter an amount to pay now for the room. Doesn't have to be total, but must be an integer. Total cost for the room is " + hotel.allRooms.get(selectedRoom).getAveragePrice());
                 int prepaidAmt = scanner.nextInt();
+                System.out.println("Please input your phone number: ");
+                scanner.nextLine();
+                String phoneNumber = scanner.nextLine();
                 System.out.println("Lastly, how many guests are in your booking party?");
                 scanner.nextLine();
                 int partySize = scanner.nextInt();
+                Client client = new Client(resName, phoneNumber, partySize);
                 System.out.println("Reservation in room " + selectedRoom + " booked, " + resName + ", enjoy your stay!");
+                //could also use client.getName() and such and such methods
 
 
             } else if (!hotel.allRooms.containsKey(selectedRoom)) {

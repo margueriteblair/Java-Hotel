@@ -37,7 +37,13 @@ public class Main {
 
             //we need logic to ensure that the room they put in for actually exists
             int selectedRoom = scanner.nextInt();
-            System.out.println("Reservation in room " + selectedRoom + " booked, enjoy your stay!");
+            if (hotel.allRooms.containsKey(selectedRoom)) {
+                System.out.println("Reservation in room " + selectedRoom + " booked, enjoy your stay!");
+
+            } else if (!hotel.allRooms.containsKey(selectedRoom)) {
+                System.out.println("Error in trying to book your room, please try again.");
+            }
+            //put this shit above in a while loop^^^
         } else if (token.trim().equals("out")) {
             //checking out logic
             System.out.println("Please select which of the following rooms you're checking out of:");

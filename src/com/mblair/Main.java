@@ -27,18 +27,24 @@ public class Main {
         if (token.trim().equals("in")) {
             //checking in logic
             System.out.println("Please select one of the available rooms from below:");
-            for (var room : hotel.availableStandards) {
-                System.out.print(room.getRoomNum() + "-" + room.getRoomType() + " ");
-            }
-            for (var room : hotel.availableSuites) {
-                System.out.print(room.getRoomNum() + "-" + room.getRoomType());
+//            for (var room : hotel.availableStandards) {
+//                System.out.print(room.getRoomNum() + "-" + room.getRoomType() + " ");
+//            }
+//            for (var room : hotel.availableSuites) {
+//                System.out.print(room.getRoomNum() + "-" + room.getRoomType());
+//            }
+            for (var room : hotel.allRooms.keySet()) {
+                System.out.print(room + " ");
             }
             System.out.println();
 
             //we need logic to ensure that the room they put in for actually exists
             int selectedRoom = scanner.nextInt();
             if (hotel.allRooms.containsKey(selectedRoom)) {
-                System.out.println("Reservation in room " + selectedRoom + " booked, enjoy your stay!");
+                System.out.println("Type your full name to book the room:");
+                String resName = scanner.nextLine();
+                System.out.println("Reservation in room " + selectedRoom + " booked, " + resName + "enjoy your stay!");
+
 
             } else if (!hotel.allRooms.containsKey(selectedRoom)) {
                 System.out.println("Error in trying to book your room, please try again.");

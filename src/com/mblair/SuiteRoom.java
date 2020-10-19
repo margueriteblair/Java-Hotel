@@ -1,6 +1,8 @@
 package com.mblair;
 
 public class SuiteRoom extends StandardRoom {
+    //note to self: originally had SuiteRoom just extend room
+    //ended up switching it to extend StandardRoom because StandardRoom constructor already has reds & rooms built in
     private boolean needsRestock;
     private boolean kitchenette;
 
@@ -39,7 +41,6 @@ public class SuiteRoom extends StandardRoom {
     public void restock() {
         needsRestock = false;
     }
-
     public boolean hasKitchenette() {
         return kitchenette;
     }

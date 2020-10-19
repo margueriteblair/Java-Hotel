@@ -23,6 +23,7 @@ public class StandardRoom extends Room {
 
     public StandardRoom(int averagePrice, int roomNum) {
         this(averagePrice, roomNum, "single", roomNum / 100, 1, 1);
+        //the this keyword will call upon our other constructor declared on line 18
 
     }
     //roomNum / 100 for roomFloor!! Margie plz read this later

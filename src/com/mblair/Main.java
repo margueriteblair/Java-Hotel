@@ -20,6 +20,7 @@ public class Main {
     }
 
     public static void cliLogic(Hotel hotel) {
+
         while(true) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Welcome valued hotel guest!\nWould you like to check in or check out?");
@@ -61,6 +62,8 @@ public class Main {
                         thread.sleep(3000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
+                    } finally {
+                        scanner.nextLine();
                     }
                 } else if (!hotel.allRooms.containsKey(selectedRoom)) {
                     System.out.println("Error in trying to book your room, please try again.");

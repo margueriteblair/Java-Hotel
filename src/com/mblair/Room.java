@@ -38,7 +38,7 @@ public abstract class Room {
     public void checkout() {
         isOccupied = false;
         needsCleaning = true;
-        System.out.println("Outstanding price: $" );//occupant.getBalance());
+        System.out.println("Outstanding price: $" + occupant.getOutstanding());//occupant.getBalance());
     //note to self, margie, create get outstandingbalance() method for the client
 
     }

@@ -1,7 +1,8 @@
 package com.mblair;
 
 public class StandardRoom extends Room {
-
+    private int rooms;
+    private int beds;
 
     @Override
     public boolean reserve(Client client) {
@@ -9,14 +10,9 @@ public class StandardRoom extends Room {
     }
 
     public StandardRoom(int averagePrice, int roomNum, String roomType, int roomFloor) {
-        super(averagePrice, roomNum, roomType, roomFloor);
+        super(averagePrice, roomNum, "single", roomFloor);
+        this.rooms = rooms;
+        this.beds = beds;
     }
 
-
-//    public StandardRoom() {
-//        super(averagePrice, roomNum, "single", roomFloor);
-//        rooms = 1;
-//        beds = 1;
-//        //constructor baby!
-//    }
 }

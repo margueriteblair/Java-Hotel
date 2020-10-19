@@ -87,6 +87,7 @@ public class Main {
 
         }
 //note to self, maybe a hashmap with a unique key and value for each room to make it easier//for guests
+        //somewhere have to place a break statement to have the while loop end
 
     }
 }

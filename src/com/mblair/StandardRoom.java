@@ -8,6 +8,7 @@ public class StandardRoom extends Room {
     public boolean reserve(Client client) {
         if (client.getPartySize() > 2 * beds) {
             System.out.println("Room at capacity, not available.");
+            return false;
         }
         return super.reserve(client);
     }

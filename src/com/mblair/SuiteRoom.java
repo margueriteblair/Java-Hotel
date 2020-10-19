@@ -3,6 +3,9 @@ package com.mblair;
 public class SuiteRoom extends Room {
     private String roomType;
     private boolean needsRestock;
+    private boolean kitchenette;
+    private int rooms;
+    private int beds;
     //
 
     public SuiteRoom(int averagePrice, int roomNum, String roomType, int roomFloor) {

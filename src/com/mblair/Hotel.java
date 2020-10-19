@@ -58,6 +58,15 @@ public class Hotel {
     public void checkoutRoom(Room room) {
         //run the checkout process for a room and move the room
         //from reserved to available
+        if (room.getRoomType().equals("single")) {
+            reservedStandards.remove((StandardRoom) room);
+            availableStandards.add((StandardRoom) room);
+            room.setIsOccupied(room.isOccupied());
+        } else if (room.getRoomType().equals("suite")) {
+            reservedSuites.remove((SuiteRoom) room);
+            availableSuites.add((SuiteRoom) room);
+            room.setIsOccupied(room.isOccupied());
+        }
     }
 
     public void getClientBalance(Client client) {

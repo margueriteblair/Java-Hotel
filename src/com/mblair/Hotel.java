@@ -48,10 +48,12 @@ public class Hotel {
             reservedStandards.add((StandardRoom) room);
             availableStandards.remove((StandardRoom) room);
             room.setIsOccupied(room.isOccupied()); //this should work, me thinks
+            clients.add(client);
         } else if (room.getRoomType().equals("suite")) {
             reservedSuites.add((SuiteRoom) room);
             availableSuites.remove((SuiteRoom) room); //casting
             room.setIsOccupied(room.isOccupied());
+            clients.add(client);
         }
     }
 

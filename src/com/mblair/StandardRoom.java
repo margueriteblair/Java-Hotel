@@ -1,11 +1,14 @@
 package com.mblair;
 
 public class StandardRoom extends Room {
-    private int rooms;
-    private int beds;
+    private int rooms = 1;
+    private int beds = 1;
 
     @Override
     public boolean reserve(Client client) {
+        if (client.getPartySize() > 2 * beds) {
+            System.out.println("Room at capacity, not available.");
+        }
         return super.reserve(client);
     }
 

@@ -1,8 +1,8 @@
 package com.mblair;
 
 public class StandardRoom extends Room {
-    private int rooms = 1;
-    private int beds = 1;
+    private int rooms;
+    private int beds;
     private final int ROOM_LIMIT = 2; //final int so that we don't have to hardcode it
 
     @Override
@@ -14,6 +14,7 @@ public class StandardRoom extends Room {
         return super.reserve(client);
     }
 
+    //WHY DOES SOMETHING ABOUT THIS SEEM WROOOONG???
     public StandardRoom(int averagePrice, int roomNum, String roomType, int roomFloor) {
         super(averagePrice, roomNum, "single", roomFloor);
         this.rooms = rooms;

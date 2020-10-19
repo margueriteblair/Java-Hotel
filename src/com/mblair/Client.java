@@ -8,7 +8,7 @@ public class Client {
     private String phoneNumber; //nb: we have to put in the phone numbers as a string
     private int roomNumber;
     private String roomType;
-    Room room;
+    private Room room;
 
     public Client(String name, String phoneNumber, int partySize) {
         this.name = name;

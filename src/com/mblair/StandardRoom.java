@@ -14,12 +14,18 @@ public class StandardRoom extends Room {
         return super.reserve(client);
     }
 
-    //WHY DOES SOMETHING ABOUT THIS SEEM WROOOONG???
-    public StandardRoom(int averagePrice, int roomNum, String roomType, int roomFloor) {
-        super(averagePrice, roomNum, "single", roomFloor);
+
+    public StandardRoom(int averagePrice, int roomNum, String roomType, int roomFloor, int rooms, int beds) {
+        super(averagePrice, roomNum, roomType, roomFloor);
         this.rooms = rooms;
         this.beds = beds;
     }
+
+    public StandardRoom(int averagePrice, int roomNum) {
+        this(averagePrice, roomNum, "single", roomNum / 100, 1, 1);
+
+    }
+    //roomNum / 100 for roomFloor!! Margie plz read this later
     //should i overload the standard room constructor with a specific instance
     //where rooms and beds = 1 each
 

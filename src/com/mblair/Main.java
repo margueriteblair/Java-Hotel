@@ -7,11 +7,11 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         Hotel javaHotel = new Hotel("Java Hotel",
-                new StandardRoom(1000, 101, "single", 1),
-                new StandardRoom(2000, 404, "single", 4),
-                new StandardRoom(1500, 302, "single", 3),
-                new SuiteRoom(10000, 707, "suite", 7),
-                new SuiteRoom(15000, 810, "suite", 8)
+                new StandardRoom(1000, 101, "single", 1, 1, 1),
+                new StandardRoom(2000, 404, "single", 4 , 1, 2),
+                new StandardRoom(1500, 302, "single", 3, 1, 1),
+                new SuiteRoom(10000, 707, "suite", 7, 2, 3),
+                new SuiteRoom(15000, 810, "suite", 8, 3, 3)
                 );
         //create command line interface code to go below
         //that way, when we run the main program, just like with the mortgage
@@ -21,8 +21,8 @@ public class Main {
 
     public static void cliLogic(Hotel hotel) {
 
+        Scanner scanner = new Scanner(System.in);
         while(true) {
-            Scanner scanner = new Scanner(System.in);
             System.out.println("Welcome valued hotel guest!\nWould you like to check in or check out?");
             System.out.println("Please type 'in' for checking in, 'out' for leaving.");
             String token = scanner.next();
@@ -77,6 +77,9 @@ public class Main {
                 for (var room : hotel.reservedStandards) {
                     System.out.println(room.getRoomNum());
                 }
+                for (var room: hotel.reservedSuites) {
+                    System.out.println(room.getRoomNum());
+                }
                 int selectedRoom = scanner.nextInt();
                 //add logic to ensure type of room is in there
                 System.out.println("Great! For confirmation, please type your full name as you used it to book the room: ");
@@ -84,10 +87,10 @@ public class Main {
                 String checkoutClient = scanner.nextLine();
                 System.out.println("Thank you, " + checkoutClient + "! We'll see you next time.");
 
+
             } else {
                 System.out.println("Please input a valid option.");
             }
-            scanner.close();
 
         }
 //note to self, maybe a hashmap with a unique key and value for each room to make it easier//for guests

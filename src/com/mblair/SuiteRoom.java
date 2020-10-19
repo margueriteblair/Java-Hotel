@@ -1,15 +1,14 @@
 package com.mblair;
 
-public class SuiteRoom extends Room {
+public class SuiteRoom extends StandardRoom {
     private boolean needsRestock;
     private boolean kitchenette;
-    private int beds;
-    private int rooms;
+
     //you don't need to redeclare stuff that has been inherited
 
-    public SuiteRoom(int averagePrice, int roomNum, String roomType, int roomFloor) {
+    public SuiteRoom(int averagePrice, int roomNum, String roomType, int roomFloor, int beds, int rooms) {
         //constructor baby!
-        super(averagePrice, roomNum, roomType, roomFloor);
+        super(averagePrice, roomNum, roomType, roomFloor, beds, rooms);
         this.kitchenette = kitchenette; //kitchenette returns a boolean anyways
         //room type will always be 'suite'
     }
@@ -17,10 +16,9 @@ public class SuiteRoom extends Room {
     //second SuiteRoom() constructor to demonstrate constructor overloading
     //this one is more of a default
     public SuiteRoom(int averagePrice, int roomNum, int roomFloor) {
-        super(averagePrice, roomNum, "suite", roomFloor);
+        super(averagePrice, roomNum, "suite", roomFloor, 2, 2);
         this.kitchenette = true;
-        this.beds = 1;
-        this.rooms = 1;
+
     }
 
     @Override

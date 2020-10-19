@@ -10,7 +10,7 @@ public class SuiteRoom extends Room {
     public SuiteRoom(int averagePrice, int roomNum, String roomType, int roomFloor) {
         //constructor baby!
         super(averagePrice, roomNum, roomType, roomFloor); //the defaults
-        //room type will always be 'single'
+        //room type will always be 'suite'
     }
 
     @Override
@@ -30,6 +30,14 @@ public class SuiteRoom extends Room {
 
     public void restock() {
         needsRestock = false;
+    }
+
+    public boolean hasKitchenette() {
+        return kitchenette;
+    }
+
+    public boolean getNeedsRestock() {
+        return needsRestock;
     }
 
 }

@@ -63,11 +63,11 @@ public class Hotel {
         if (room.getRoomType().equals("single")) {
             reservedStandards.remove((StandardRoom) room);
             availableStandards.add((StandardRoom) room);
-            room.setIsOccupied(room.isOccupied());
+            room.checkout();
         } else if (room.getRoomType().equals("suite")) {
             reservedSuites.remove((SuiteRoom) room);
             availableSuites.add((SuiteRoom) room);
-            room.setIsOccupied(room.isOccupied());
+            room.checkout();
         }
     }
 

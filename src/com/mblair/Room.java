@@ -27,6 +27,8 @@ public abstract class Room {
         isOccupied = true;
         occupant = client;
 //        client.roomNum = this; //we're setting it equal to this instantiation
+//        reserve = Should change room to isOccupied and assign the client to the occupant if isOccupied and
+//        needsCleaning are false otherwise print “unavailable” Should return true if successful or false if issue.
 
         return true;
     }
@@ -38,8 +40,8 @@ public abstract class Room {
     public void checkout() {
         isOccupied = false;
         needsCleaning = true;
-        System.out.println("Outstanding price: $" + occupant.getOutstanding());//occupant.getBalance());
-    //note to self, margie, create get outstandingbalance() method for the client
+        System.out.println("Outstanding balance: $" + occupant.getOutstanding());
+        occupant = null;
 
     }
 
@@ -66,10 +68,6 @@ public abstract class Room {
 
     public boolean isNeedsCleaning() {
         return needsCleaning;
-    }
-
-    public void setIsOccupied(boolean isOccupied) {
-        isOccupied = !isOccupied;
     }
 
     public Client getOccupant() {

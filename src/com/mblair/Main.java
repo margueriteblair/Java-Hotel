@@ -24,7 +24,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         while(true) {
             System.out.println("Welcome valued hotel guest!\nWould you like to check in or check out?");
-            System.out.println("Please type 'in' for checking in, 'out' for leaving.");
+            System.out.println("Please type 'in' for checking in, 'out' for leaving. 'Exit' to leave application.");
             String token = scanner.next();
             if (token.trim().equals("in")) {
                 System.out.println("Please select one of the available rooms from below:");
@@ -87,7 +87,18 @@ public class Main {
                 String checkoutClient = scanner.nextLine();
                 System.out.println("Thank you, " + checkoutClient + "! We'll see you next time.");
 
+                Thread thread = new Thread();
+                //the following code pauses it for a bit before circling back into the code
+                try {
+                    thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    scanner.nextLine();
+                }
 
+            } else if (token.trim().equals("exit")) {
+                return;
             } else {
                 System.out.println("Please input a valid option.");
             }

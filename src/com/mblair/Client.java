@@ -54,5 +54,9 @@ public class Client {
         prepaidAmt = amount;
     }
 
+    public void setCurrentBill(int amount) {
+        currentBill = amount;
+    }
+
 
 }

@@ -51,9 +51,12 @@ public class Main {
                 String phoneNumber = scanner.nextLine();
                 System.out.println("Lastly, how many guests are in your booking party?");
                 int partySize = scanner.nextInt();
+
                 Client client = new Client(resName, phoneNumber, partySize);
                 client.setPrepaidAmt(prepaidAmt);
+                client.setCurrentBill(hotel.allRooms.get(selectedRoom).getAveragePrice());
                 hotel.reserveRoom(hotel.allRooms.get(selectedRoom), client);
+
                 System.out.println("Reservation in room " + selectedRoom + " booked, " + resName + ", enjoy your stay!");
                 //could also use client.getName() and such and such methods
                 //add a back to main menu type of thing here?

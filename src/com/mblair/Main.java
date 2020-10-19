@@ -29,9 +29,16 @@ public class Main {
             if (token.trim().equals("in")) {
                 System.out.println("Please select one of the available rooms from below:");
 
-                for (var room : hotel.allRooms.entrySet()) {
-                    System.out.print("Room " + room.getKey() + " - $" + room.getValue().getAveragePrice() + " - " + room.getValue().getRoomType() + "      ");
+                for (var room: hotel.availableSuites) {
+                    System.out.println("Room " + room.getRoomNum() + " - $" + room.getAveragePrice() + " - " + room.getRoomType() + "     ");
                 }
+                for (var room: hotel.availableStandards) {
+                    System.out.println("Room " + room.getRoomNum() + " - $" + room.getAveragePrice() + " - " + room.getRoomType() + "     ");
+                }
+
+//                for (var room : hotel.allRooms.entrySet()) {
+//                    System.out.print("Room " + room.getKey() + " - $" + room.getValue().getAveragePrice() + " - " + room.getValue().getRoomType() + "      ");
+//                }
                 System.out.println();
 
                 //we need logic to ensure that the room they put in for actually exists

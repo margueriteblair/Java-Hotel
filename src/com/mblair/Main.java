@@ -60,7 +60,7 @@ public class Main {
                     Thread thread = new Thread();
                     //the following code pauses it for a bit before circling back into the code
                     try {
-                        thread.sleep(3000);
+                        thread.sleep(2000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     } finally {
@@ -85,12 +85,14 @@ public class Main {
                 System.out.println("Great! For confirmation, please type your full name as you used it to book the room: ");
                 scanner.nextLine();
                 String checkoutClient = scanner.nextLine();
+                hotel.checkoutRoom(hotel.allRooms.get(selectedRoom));
+                System.out.println("Type the remaining balance to pay and check out.");
+                int balance = scanner.nextInt();
                 System.out.println("Thank you, " + checkoutClient + "! We'll see you next time.");
-
                 Thread thread = new Thread();
-                //the following code pauses it for a bit before circling back into the code
+                //the following code pauses it for a bit before circling back into the code main menu
                 try {
-                    thread.sleep(3000);
+                    thread.sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
@@ -105,7 +107,7 @@ public class Main {
 
         }
 //note to self, maybe a hashmap with a unique key and value for each room to make it easier//for guests
-        //somewhere have to place a break statement to have the while loop end
+// somewhere have to place a break or return statement to have the while loop end
 
     }
 }

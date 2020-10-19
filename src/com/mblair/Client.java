@@ -50,5 +50,9 @@ public class Client {
         return room;
     }
 
+    public void setPrepaidAmt(int amount) {
+        prepaidAmt = amount;
+    }
+
 
 }

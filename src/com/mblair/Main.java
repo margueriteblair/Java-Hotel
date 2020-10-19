@@ -52,6 +52,7 @@ public class Main {
                 System.out.println("Lastly, how many guests are in your booking party?");
                 int partySize = scanner.nextInt();
                 Client client = new Client(resName, phoneNumber, partySize);
+                client.setPrepaidAmt(prepaidAmt);
                 hotel.reserveRoom(hotel.allRooms.get(selectedRoom), client);
                 System.out.println("Reservation in room " + selectedRoom + " booked, " + resName + ", enjoy your stay!");
                 //could also use client.getName() and such and such methods

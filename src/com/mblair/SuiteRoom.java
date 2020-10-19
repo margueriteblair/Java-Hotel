@@ -17,6 +17,8 @@ public class SuiteRoom extends Room {
 
     public void overrideCheckout() {
         //set needsRestock to true run standard checkout
+        needsRestock = true;
+        checkout();
     }
 
     public void restock() {

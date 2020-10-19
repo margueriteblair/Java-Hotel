@@ -9,7 +9,7 @@ public class StandardRoom extends Room {
     }
 
     public StandardRoom(int averagePrice, int roomNum, String roomType, int roomFloor) {
-        super(averagePrice, roomNum, roomType, roomFloor); //use getters to get these bad mamma jammas
+        super(averagePrice, roomNum, roomType, roomFloor);
     }
 
 

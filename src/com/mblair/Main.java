@@ -61,6 +61,7 @@ public class Main {
                 System.out.println("Error in trying to book your room, please try again.");
             }
             //put this shit above in a while loop^^^
+
         } else if (token.trim().equals("out")) {
             //checking out logic
             System.out.println("Please select which of the following rooms you're checking out of:");
@@ -69,9 +70,11 @@ public class Main {
             }
             int selectedRoom = scanner.nextInt();
             //add logic to ensure type of room is in there
-            System.out.println("Great! For confirmation, please type you're full name as you used it to book the room: ");
+            System.out.println("Great! For confirmation, please type your full name as you used it to book the room: ");
+            scanner.nextLine();
             String checkoutClient = scanner.nextLine();
             System.out.println("Thank you, " + checkoutClient + "! We'll see you next time.");
+
         } else {
             System.out.println("Please input a valid option.");
         }

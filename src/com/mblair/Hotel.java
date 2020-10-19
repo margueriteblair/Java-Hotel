@@ -29,7 +29,7 @@ public class Hotel {
 
     public void addRoom(Room room) {
         //add room to either suite room
-        //or add room to standard room list hehe
+        //or add room to standard room list
         if (room.getRoomType().equals("suite")) {
             availableSuites.add((SuiteRoom) room);
         } else {
@@ -60,9 +60,10 @@ public class Hotel {
         //from reserved to available
     }
 
-    public void getClientBalance() {
-        //get the balance of a client either by their room number
-        //or by their name
+    public void getClientBalance(Client client) {
+        String name = client.getName();
+        client.getOutstanding();
+        //check tictactoe logic for repeating cycle
     }
 
 

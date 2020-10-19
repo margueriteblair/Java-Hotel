@@ -6,7 +6,6 @@ public class SuiteRoom extends Room {
     private boolean kitchenette;
     private int rooms;
     private int beds;
-    //
 
     public SuiteRoom(int averagePrice, int roomNum, String roomType, int roomFloor) {
         //constructor baby!
@@ -14,14 +13,19 @@ public class SuiteRoom extends Room {
         //room type will always be 'single'
     }
 
-    public void overrideReserve() {
-        //include a check on needsRestock then run standard reserve
+    @Override
+    public boolean reserve(Client client) {
+        if (needsRestock) {
+            System.out.println("Room not currently available, needs to be restocked.");
+            return false;
+        }
+        return super.reserve(client);
     }
 
-    public void overrideCheckout() {
-        //set needsRestock to true run standard checkout
+    @Override
+    public void checkout() {
         needsRestock = true;
-        checkout();
+        super.checkout();
     }
 
     public void restock() {

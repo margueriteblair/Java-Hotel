@@ -53,6 +53,7 @@ public class Main {
                     client.setCurrentBill(hotel.allRooms.get(selectedRoom).getAveragePrice());
                     hotel.reserveRoom(hotel.allRooms.get(selectedRoom), client);
 
+
                     System.out.println("Reservation in room " + selectedRoom + " booked, " + resName + ", enjoy your stay!");
                     //could also use client.getName() and such and such methods
                     //add a back to main menu type of thing here?

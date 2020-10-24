@@ -78,7 +78,7 @@ public class Main {
                 }
                 //put this shit above in a while loop^^^
 
-            } else if (token.trim().equals("out")) {
+            } else if (token.trim().toLowerCase().equals("out")) {
                 //checking out logic
                 System.out.println("Please select which of the following rooms you're checking out of:");
                 for (var room : hotel.reservedStandards) {
@@ -106,7 +106,7 @@ public class Main {
                     scanner.nextLine();
                 }
 
-            } else if (token.trim().equals("exit")) {
+            } else if (token.trim().toLowerCase().equals("exit")) {
                 return;
             } else {
                 System.out.println("Please input a valid option.");

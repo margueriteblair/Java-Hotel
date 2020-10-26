@@ -35,13 +35,7 @@ public class Main {
                 for (var room: hotel.availableStandards) {
                     System.out.println("Room " + room.getRoomNum() + " - $" + room.getAveragePrice() + " - " + room.getRoomType() + "     ");
                 }
-
-//                for (var room : hotel.allRooms.entrySet()) {
-//                    System.out.print("Room " + room.getKey() + " - $" + room.getValue().getAveragePrice() + " - " + room.getValue().getRoomType() + "      ");
-//                }
                 System.out.println();
-
-                //we need logic to ensure that the room they put in for actually exists
                 int selectedRoom = scanner.nextInt();
                 scanner.nextLine();
                 if (hotel.allRooms.containsKey(selectedRoom)) {
@@ -62,10 +56,7 @@ public class Main {
 
 
                     System.out.println("Reservation in room " + selectedRoom + " booked, " + resName + ", enjoy your stay!");
-                    //could also use client.getName() and such and such methods
-                    //add a back to main menu type of thing here?
                     Thread thread = new Thread();
-                    //the following code pauses it for a bit before circling back into the code
                     try {
                         thread.sleep(2000);
                     } catch (InterruptedException e) {
@@ -76,10 +67,7 @@ public class Main {
                 } else if (!hotel.allRooms.containsKey(selectedRoom)) {
                     System.out.println("Error in trying to book your room, please try again.");
                 }
-                //put this shit above in a while loop^^^
-
             } else if (token.trim().toLowerCase().equals("out")) {
-                //checking out logic
                 System.out.println("Please select which of the following rooms you're checking out of:");
                 for (var room : hotel.reservedStandards) {
                     System.out.println(room.getRoomNum());
@@ -88,7 +76,6 @@ public class Main {
                     System.out.println(room.getRoomNum());
                 }
                 int selectedRoom = scanner.nextInt();
-                //add logic to ensure type of room is in there
                 System.out.println("Great! For confirmation, please type your full name as you used it to book the room: ");
                 scanner.nextLine();
                 String checkoutClient = scanner.nextLine();
@@ -97,7 +84,6 @@ public class Main {
                 int balance = scanner.nextInt();
                 System.out.println("Thank you, " + checkoutClient + "! We'll see you next time.");
                 Thread thread = new Thread();
-                //the following code pauses it for a bit before circling back into the code main menu
                 try {
                     thread.sleep(2000);
                 } catch (InterruptedException e) {

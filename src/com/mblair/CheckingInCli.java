@@ -33,6 +33,8 @@ public class CheckingInCli {
             hotel.reserveRoom(hotel.allRooms.get(selectedRoom), client);
             System.out.println("Reservation in room " + selectedRoom + " booked, " + resName + ", enjoy your stay!");
 
-        }
+        } else if (!hotel.allRooms.containsKey(selectedRoom)) {
+        System.out.println("Error in trying to book your room, please try again.");
+    }
     }
 }

@@ -21,8 +21,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         while(true) {
-            System.out.println("Welcome valued hotel guest!\nWould you like to check in or check out?");
-            System.out.println("Please type 'in' for checking in, 'out' for leaving. 'Exit' to leave application.");
+            HotelGreeting.greeting();
             String token = scanner.next();
             if (token.trim().equals("in")) {
                     CheckingInCli.checkin(hotel);
@@ -34,9 +33,6 @@ public class Main {
                     } finally {
                         scanner.nextLine();
                     }
-//                } else if (!hotel.allRooms.containsKey(selectedRoom)) {
-//                    System.out.println("Error in trying to book your room, please try again.");
-//                }
             } else if (token.trim().toLowerCase().equals("out")) {
                 CheckingOutCli.checkout(hotel);
                 Thread thread = new Thread();

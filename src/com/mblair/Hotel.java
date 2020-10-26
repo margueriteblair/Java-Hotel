@@ -7,16 +7,13 @@ import java.util.List;
 
 public class Hotel {
     private String hotelName;
-    private int numOfRooms;
 
-    //arraylists of each available and reserved standard rooms
-
-    Map<Integer,Room> allRooms = new HashMap<>();
-    List<StandardRoom> availableStandards = new ArrayList<>();
-    List<StandardRoom> reservedStandards = new ArrayList<>();
-    List<SuiteRoom> availableSuites = new ArrayList<>();
-    List<SuiteRoom> reservedSuites = new ArrayList<>();
-    List<Client> clients = new ArrayList<>();
+    public Map<Integer,Room> allRooms = new HashMap<>();
+    public List<StandardRoom> availableStandards = new ArrayList<>();
+    public List<StandardRoom> reservedStandards = new ArrayList<>();
+    public List<SuiteRoom> availableSuites = new ArrayList<>();
+    public List<SuiteRoom> reservedSuites = new ArrayList<>();
+    public List<Client> clients = new ArrayList<>();
 
     //Hotel constructor
 

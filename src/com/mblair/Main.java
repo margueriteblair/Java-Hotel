@@ -13,9 +13,7 @@ public class Main {
                 new SuiteRoom(10000, 707, "suite", 7, 2, 3),
                 new SuiteRoom(15000, 810, "suite", 8, 3, 3)
                 );
-        //create command line interface code to go below
-        //that way, when we run the main program, just like with the mortgage
-        //calculator, we're taken through the steps of the program
+
         cliLogic(javaHotel);
     }
 
@@ -28,7 +26,6 @@ public class Main {
             String token = scanner.next();
             if (token.trim().equals("in")) {
                 System.out.println("Please select one of the available rooms from below:");
-
                 for (var room: hotel.availableSuites) {
                     System.out.println("Room " + room.getRoomNum() + " - $" + room.getAveragePrice() + " - " + room.getRoomType() + "     ");
                 }
@@ -53,17 +50,8 @@ public class Main {
                     client.setPrepaidAmt(prepaidAmt);
                     client.setCurrentBill(hotel.allRooms.get(selectedRoom).getAveragePrice());
                     hotel.reserveRoom(hotel.allRooms.get(selectedRoom), client);
-
-
                     System.out.println("Reservation in room " + selectedRoom + " booked, " + resName + ", enjoy your stay!");
-                    Thread thread = new Thread();
-                    try {
-                        thread.sleep(2000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    } finally {
-                        scanner.nextLine();
-                    }
+                    ThreadPause.main();
                 } else if (!hotel.allRooms.containsKey(selectedRoom)) {
                     System.out.println("Error in trying to book your room, please try again.");
                 }
@@ -83,14 +71,7 @@ public class Main {
                 System.out.println("Type the remaining balance to pay and check out.");
                 int balance = scanner.nextInt();
                 System.out.println("Thank you, " + checkoutClient + "! We'll see you next time.");
-                Thread thread = new Thread();
-                try {
-                    thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } finally {
-                    scanner.nextLine();
-                }
+                ThreadPause.main();
 
             } else if (token.trim().toLowerCase().equals("exit")) {
                 return;
@@ -99,8 +80,6 @@ public class Main {
             }
 
         }
-//note to self, maybe a hashmap with a unique key and value for each room to make it easier//for guests
-// somewhere have to place a break or return statement to have the while loop end
 
     }
 }

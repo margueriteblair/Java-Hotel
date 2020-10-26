@@ -51,27 +51,27 @@ public class Main {
                     client.setCurrentBill(hotel.allRooms.get(selectedRoom).getAveragePrice());
                     hotel.reserveRoom(hotel.allRooms.get(selectedRoom), client);
                     System.out.println("Reservation in room " + selectedRoom + " booked, " + resName + ", enjoy your stay!");
-                    ThreadPause.main();
+                    Thread thread = new Thread();
+                    try {
+                        thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } finally {
+                        scanner.nextLine();
+                    }
                 } else if (!hotel.allRooms.containsKey(selectedRoom)) {
                     System.out.println("Error in trying to book your room, please try again.");
                 }
             } else if (token.trim().toLowerCase().equals("out")) {
-                System.out.println("Please select which of the following rooms you're checking out of:");
-                for (var room : hotel.reservedStandards) {
-                    System.out.println(room.getRoomNum());
+                CheckingOutCli.checkout(hotel);
+                Thread thread = new Thread();
+                try {
+                    thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    scanner.nextLine();
                 }
-                for (var room: hotel.reservedSuites) {
-                    System.out.println(room.getRoomNum());
-                }
-                int selectedRoom = scanner.nextInt();
-                System.out.println("Great! For confirmation, please type your full name as you used it to book the room: ");
-                scanner.nextLine();
-                String checkoutClient = scanner.nextLine();
-                hotel.checkoutRoom(hotel.allRooms.get(selectedRoom));
-                System.out.println("Type the remaining balance to pay and check out.");
-                int balance = scanner.nextInt();
-                System.out.println("Thank you, " + checkoutClient + "! We'll see you next time.");
-                ThreadPause.main();
 
             } else if (token.trim().toLowerCase().equals("exit")) {
                 return;
